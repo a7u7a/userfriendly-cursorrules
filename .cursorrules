@@ -1,39 +1,28 @@
-// About me
+# Professional Background
+- Design Technologist & Web Developer
+- Education: Strategic Design (2016), MSc Design Informatics (2019)
+- Based in Berlin, Germany
+- Specializes in: Interactive installations, data visualizations, cloud applications
+- Strong interest in data wrangling, graphics, and novel tech applications
 
-// Education: 
-// Strategic Design, Universidad Catolica de Chile, 2016
-// Msc Design Informatics, Univeristy of Edinburgh, 2019
+# Code Quality Expectations
+- Professional-grade code expected despite design background
+- Prioritize:
+  - Security best practices
+  - Performance optimization
+  - Clean code principles
+  - Maintainable architecture
 
-// My public bio: I'm a design technologist and web developer bridging the gap between design and code to craft exceptional digital experiences. I help brands, cultural institutions, and agencies develop custom solutions and non-default interfaces, from interactive installations to data visualizations and cloud-based applications. Through close collaboration and strategic technology choices, I transform complex technical challenges into elegant, user-centered solutions that deliver immediate value.
-// I've been interested in computers since I was a child. I got hooked when I was 14 and started using 3d modeling software. 
-// I started coding as a hobby in uni. I decided to start coding every day as much as possible since 2019. Then I have been away from design because I was too busy learning to code and finding my place in the tech industry. Now I feel like I know enough to start blending design and code again.
-// I'm interested in any touchpoint that combines design and code. Specially those that involve interaction and graphics and data. 
-// During my msc I discovered that I really enjoy working with data and doing data wrangling and visualizations.
-// I want to keep coding and exploring new techniques and algorithms.
-// Currently based in Berlin, Germany.
+# Coding Style Preferences
+- Readable over compact code
+- Minimal comments, only for:
+  - Complex logic
+  - Non-standard techniques
+  - Learning reference
+- Clear function/variable naming
 
-// My learning and career progress goals
-// Project context
-// Project stages: Each has a different set of best practices and code styles
-// - Prototyping: Here a the key is to create functional proof of concept code as fast as possible. 
-// Its not that the code is expected to be of lesser quality. 
-// High quality code is always expected. They key here is to develop a functional mvp that will allow us to validate primary architecture decisions with which to build on top of. 
-// - Development: This stage starts by taking the prototype and thinking about the right data structures and abstractions that will allow us to build a maintainable and performant system.
-// Once a solid plan is in place, the code is written with a focus on readability, organization, and best practices. 
-// - Maintenance: This stage is when the project is in production. No major changes are expected. Mostly bug fixes and optimizations.
-// - Enhancements: This is when someone up above decides that the project needs some new feature. Its considered a sub-project. Evaluated on a case by case basis.
-
-// Tooling
-
-// Typescript
-
-// Tailwind CSS
-// scales
-// Order of multiline tailwind css classes
-
-// - Decirle a cursor que escribo codigo en forma profesional y se espera de mi que entregue codigo de alta calidad. Por lo tanto debe aconsejarme sobre mejores practicas o cualquier otra potencial mejora al codigo. Incluyendo mejoras relativas a potenciales riesgos de seguridad.
-// Even thought my background is in design, I always strive for high quality code. 
-
-// Miscellaneous
-// Try not to get ahead too much with the code. My prompts will have clear questions and instrictions to best of my habilities. So just stick to producing the code that is asked for. 
-// I try to write consise code with sparse comments I focus on readability more than compact one-line style of coding. Only on places where logic may not be so obvious or I'm using a non-standard technique. Other exceptions include cases when I'm learning a new library and want to save the snippet for future reference.
+# Communication Preferences
+- Respond to specific questions only
+- Provide focused code solutions
+- Include security/performance considerations
+- Suggest improvements when relevant
