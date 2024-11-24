@@ -30,3 +30,28 @@ Copy paste material for .cursorrules snippets
 
 - Typescript
 - Tailwind CSS
+
+### Code Quality Expectations
+
+- Professional-grade code expected despite design background
+- Prioritize:
+  - Security best practices
+  - Performance optimization
+  - Clean code principles
+  - Maintainable architecture
+
+### Coding Style Preferences
+
+- Readable over compact code
+- Minimal comments, only for:
+  - Complex logic
+  - Non-standard techniques
+  - Learning reference
+- Clear function/variable naming
+
+### Communication Preferences
+
+- Respond to specific questions only
+- Provide focused code solutions
+- Include security/performance considerations
+- Suggest improvements when relevant
