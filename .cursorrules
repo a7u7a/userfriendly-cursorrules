@@ -1,101 +1,98 @@
-# Professional Background
+<!-- markdownlint-disable -->
+About me:
 
-- Design Technologist & Web Developer
-- Education: Strategic Design (2016), MSc Design Informatics (2019)
-- Based in Berlin, Germany
-- Specializes in: Interactive installations, data visualizations, cloud applications
-- Strong interest in data wrangling, graphics, and novel tech applications
+I'm a Chilean citizen living in Berlin with a freelance visa and residence permit. I work as design technologist with background in strategic design and msc in design informatics from uni of edinburgh.
+I'm looking for a full time job in Berlin or remote. I'm also open to freelance work and collaborations. I've been coding web apps for 3 years in react and have experience with python jupyter notebooks and data wrangling. I'm interested in design and technology.
 
-Tailwind Scale
-0
-0.5
-1
-1.5
-2
-2.5
-3
-3.5
-4
-5
-6
-7
-8
-9
-10
-11
-12
-14
-16
-20
-24
-28
-32
-36
-40
-44
-48
-52
-56
-60
-64
-72
-80
-96
+My languages:
+- Spanish: Native
+- English: Fluent
+- German: B1 (I learned in high school and was able to speak better than my current level, I believe I can improve fast with some practice and exposure)
 
-# .cursorrules snippets
+Current public bio:
+I'm a design technologist and web developer bridging the gap between design and code to craft exceptional digital experiences. I help brands, cultural institutions, and agencies develop custom solutions and non-default interfaces, from interactive installations to data visualizations and cloud-based applications. Through close collaboration and strategic technology choices, I transform complex technical challenges into elegant, user-centered solutions that deliver immediate value.
 
-Copy paste material for .cursorrules snippets
+My profile is more generalist but Im happy to jump into details and optimize. I like to write high quality code that is maintainable and scalable.
 
-## Project Phases
+My current professional situation is that I have experience as a dev for marketing and research projects but I want to grow my skills towards tech companies or startups that do more complex and technically interesting projects that are used by a lot of people.
 
-### Prototyping
+I started coding in Arduino and Grasshopper3d for Rhino in 2014 while studying design in Chile.Two years later I decided to deepen my technical skills by doing an msc in design informatics at uni of edinburgh, ever since I've been writing code daily, improving my knowledge of UI and web development and working as a design technologist. 
 
-- Quick MVP development
-- Validate core architecture
-- Maintain quality standards
+My ideal conditions:
+- Above 4k net/month, 3.5k minimum
+- WFH 80 percent
+- Flexible schedule: Being able to do sports every day, urban sports club membership
+- Work from Chile sometimes
+- Work distribution: Ideally a max of 30 percent design work, the rest is dev.
 
-### Development
+My publications:
+- Conference Paper, Co-author: Push-Pull Energy Futures: Using Design to Discuss Agency in Distributed Energy Systems, Designing Interactive Systems 2023
+- Conference Paper, Co-Author: Exploring critical scenarios of algorithmic energy distribution with the Karma Kettle Game, Designing Interactive Systems 2020
+- Conference Poster, Co-author: Using Data Visualization to Explore International Trade Agreements, Digital Humanities Conference, 2019
+- Book, Co-Author: The Eigengrau Laboratory Book, 2016
+- Book: Bienal de Artes Mediales, Catalogue, 2017
+- Press: Punto Flotante: Lenguaje del tiempo en el espacio físico urbano, Archdaily México, 2016
 
-- Focus on data structures
-- Emphasis on maintainability
-- Implementation of best practices
+My experience is a mix of freelance dev work and consulting. I've only been employed by research and academic insututions and one agency, future corp. In the past I've been rejected from design engineer job applications because of my lack of experience with big companies and weird employment history.
+So I need to make the most of what I have. 
 
-### Maintenance
+Industries that interest me
+- Design innovation Consulting
+- Software development
+- Data visualization
+- Videogame development
+- CAD software
+- Interaction design
+- Aerospace
+- AI/Data science
 
-- Bug fixes
-- Performance optimization
+Not so interested in crypto, finance and nfts but open to opportunities if its interesting or there is fit.
 
-### Enhancements
+Something I'd like to keep undisclosed from potential employers: 
+- I have diagnosed ADHD and work better from home. I take medication and it helps a lot.
+- I think I have autism or something that looks like it. I'm not sure but my symptoms fit.
 
-- New feature additions
-- Treated as sub-projects
-
-### Tooling
-
+My stack:
+- React
+- Python
 - Typescript
-- Tailwind CSS
+- Next.js
+- Tailwind
+- Pandas
+- Jupyter
+- GSAP
+- React-three-fiber
+- Framer Motion
+- Sanity
+- Supabase
+- Figma
+- D3.js
+- Docker
+- Git
+- Linux
 
-### Code Quality Expectations
+Clients:
+- FutureCorp
+- Elemental Chile
+- Asimov Consulting
+- Viapontica AI
+- The Egg Assembly
+- TrainFES
+- School of Informatics, U. of Edinburgh
+- School of Engineering, PUC, Chile
+- Centro de innovacion Anacleto Angelini, PUC, Chile
 
-- Professional-grade code expected despite design background
-- Prioritize:
-  - Security best practices
-  - Performance optimization
-  - Clean code principles
-  - Maintainable architecture
+Brands I worked with during my time at FutureCorp:
+- Mario Testino
+- Stink Films
+- Saatchi & Saatchi
+- Dolce & Gabbana
+- JDS Development Group (The Brooklyn Tower website)
+- Flemming Watches
+- Beige Pill Productions
 
-### Coding Style Preferences
 
-- Readable over compact code
-- Minimal comments, only for:
-  - Complex logic
-  - Non-standard techniques
-  - Learning reference
-- Clear function/variable naming
+Masters dissertation title: Comfortable Interactions: Development and evaluation of a thermal comfort management tool for energy reductions in office buildings
 
-### Communication Preferences
-
-- Respond to specific questions only
-- Provide focused code solutions
-- Include security/performance considerations
-- Suggest improvements when relevant
+Abstract:
+Great energy reductions are expected to take place in order to ensure human habitabil- ity conditions and avoid environmental catastrophe, placing great challenges for most energy intensive systems that are co-dependent with human practices and habits. The present study focuses on systems that provide indoor human comfort, responsible for much energy consumption and greenhouse emissions. In particular, this study looks at office building heating systems and the complex institutional setting in which they must perform, by identifying and integrating inputs from varied and relevant stake- holders the present dissertation proposes and evaluates a thermal comfort management tool aimed towards energy reductions in workplace settings.

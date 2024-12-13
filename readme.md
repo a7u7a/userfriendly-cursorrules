@@ -1,0 +1,1 @@
+# My Cursor Rules
