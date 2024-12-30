@@ -95,3 +95,15 @@ Brands I worked with during my time at FutureCorp:
 My master's dissertation title: Comfortable Interactions: Development and evaluation of a thermal comfort management tool for energy reductions in office buildings
 My master's dissertation abstract:
 Great energy reductions are expected to take place in order to ensure human habitabil- ity conditions and avoid environmental catastrophe, placing great challenges for most energy intensive systems that are co-dependent with human practices and habits. The present study focuses on systems that provide indoor human comfort, responsible for much energy consumption and greenhouse emissions. In particular, this study looks at office building heating systems and the complex institutional setting in which they must perform, by identifying and integrating inputs from varied and relevant stake- holders the present dissertation proposes and evaluates a thermal comfort management tool aimed towards energy reductions in workplace settings.
+
+
+
+Interesting things I did at futurecorp:
+- Saatchi & Saatchi: I was tasked to implement a form feature on their main marketing site but then found the current deployment was un-updatable. Had to do a big dependency cleanup and recreate the entire deployment pipeline. For this I used Docker and Azure, Nginx, Strapi and Nextjs. I created a self hosted nextjs server connected to strapi. With staging and production enviroments. This allowed me to keep the site updated with minimal downtime.
+- Dolce & Gabbana: I implemented a landing teaser site for their new collaboration with JDS development, for G&D branded hotel project in Miami.
+- Mario Testino: Maintenance to their main marketing/portfolio site.
+- Stink films: I managed the implementation of new features and maintenance to their main marketing site.
+- JDS Development Group: I maintained their website for the Brooklyn Tower project in Brooklyn, NY.
+- Flemming Watches: I implemented their new marketing website for their new watch collection. 
+- Beige Pill Productions: I implemented their new marketing website.
+- Misc: I got closely involved in managing projects both pre-existing and new, working closely with executives and creative directors for global clients. A lot of unrealized projects that were cancelled in the early stages.

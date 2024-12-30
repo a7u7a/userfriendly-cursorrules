@@ -4,7 +4,6 @@ Alternative: Front End Development Engineer and Design technologist with 4+ year
 
 Short version for CV: Front End Development Engineer and Design technologist. Specialized in Web technologies and human-computer interaction. With +4 years coding experience.
 
-
 Resume:
 Esteban Serrano
 Berlin, Germany
@@ -90,13 +89,3 @@ Languages
 English (Fluent)
 Spanish (Native)
 German (B1)
-
-Interesting things I did at futurecorp:
-- Saatchi & Saatchi: I was tasked to implement a form feature on their main marketing site but then found the current deployment was un-updatable. Had to do a big dependency cleanup and recreate the entire deployment pipeline. For this I used Docker and Azure, Nginx, Strapi and Nextjs. I created a self hosted nextjs server connected to strapi. With staging and production enviroments. This allowed me to keep the site updated with minimal downtime.
-- Dolce & Gabbana: I implemented a landing teaser site for their new collaboration with JDS development, for G&D branded hotel project in Miami.
-- Mario Testino: Maintenance to their main marketing/portfolio site.
-- Stink films: I managed the implementation of new features and maintenance to their main marketing site.
-- JDS Development Group: I maintained their website for the Brooklyn Tower project in Brooklyn, NY.
-- Flemming Watches: I implemented their new marketing website for their new watch collection. 
-- Beige Pill Productions: I implemented their new marketing website.
-- Misc: I got closely involved in managing projects both pre-existing and new, working closely with executives and creative directors for global clients. A lot of unrealized projects that were cancelled in the early stages.
