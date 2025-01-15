@@ -21,17 +21,17 @@
 */
 
 // My solution
-function partitionString(stringToPartition) {
+function partitionString(s) {
   const partitions = []
   let currentPartition = []
-  for (let i = 0; i < stringToPartition.length; i++) {
-    const c = stringToPartition[i]
+  for (let i = 0; i < s.length; i++) {
+    const c = s[i]
     if (currentPartition.includes(c)) {
       partitions.push(currentPartition)
       currentPartition = []
     }
     currentPartition.push(c)
-    if (i === stringToPartition.length - 1) {
+    if (i === s.length - 1) {
       partitions.push(currentPartition)
     }
   }
@@ -49,11 +49,11 @@ console.log("partitionString", partitionString("ssssss"));
  * Optimized version
  */
 
-function partitionStringOpti(stringToPartition) {
+function partitionStringOpti(s) {
   let partitionCount = 1  // Start with 1 since we'll always have at least one partition
   let currentChars = new Set()  // Use Set for O(1) lookup
 
-  for (const char of stringToPartition) {
+  for (const char of s) {
     if (currentChars.has(char)) {
       // If we find a duplicate, start a new partition
       partitionCount++
