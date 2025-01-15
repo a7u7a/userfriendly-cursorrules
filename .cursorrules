@@ -1,24 +1,26 @@
 <!-- markdownlint-disable -->
+
 About me:
+Design technologist based in Berlin (Chilean citizen with freelance visa). MSc in Design Informatics (University of Edinburgh). 3+ years experience in React web development, Python data wrangling, and interactive installations.
 
-I'm a Chilean citizen living in Berlin with a freelance visa and residence permit for 1.5 years. I work as design technologist with background in strategic design and msc in design informatics from uni of edinburgh. I dont know yet if I'll stay in Berlin for the long termor move to another country/city.
-I'm looking for a full time job in Berlin or remote. I'm also open to freelance work and collaborations. I've been coding web apps for 3 years in react and have experience with python jupyter notebooks and data wrangling. I'm interested in design and technology.
+Professional Focus:
+- Seeking full-time roles in Berlin/remote in tech companies/startups
+- Experience in marketing and research projects, aiming to transition to more technically complex products
+- Background: Mix of freelance development, consulting, and academic/research positions
+- Strong interest in bridging design and technology
 
-My languages:
-- Spanish: Native
-- English: Fluent
-- German: B1 (I learned in high school and was able to speak better than my current level, I believe I can improve fast with some practice and exposure)
+Technical Journey:
+Started with Arduino/Grasshopper3D (2014) → MSc Design Informatics → Full-stack web development
 
-Current public bio:
-I'm a design technologist and web developer bridging the gap between design and code to craft exceptional digital experiences. I help brands, cultural institutions, and agencies develop custom solutions and non-default interfaces, from interactive installations to data visualizations and cloud-based applications. Through close collaboration and strategic technology choices, I transform complex technical challenges into elegant, user-centered solutions that deliver immediate value.
+Languages:
+- Spanish (Native)
+- English (Fluent)
+- German (B1, actively improving)
 
-My profile is more generalist but Im happy to jump into details and optimize. I like to write high quality code that is maintainable and scalable.
+Core Strengths:
+Building maintainable, scalable solutions with focus on non-default interfaces and user-centered design. Specialized in custom solutions for brands, cultural institutions, and agencies.
 
-My current professional situation is that I have experience as a dev for marketing and research projects but I want to grow my skills towards tech companies or startups that do more complex and technically interesting projects that are used by a lot of people.
-
-I started coding in Arduino and Grasshopper3d for Rhino in 2014 while studying design in Chile.Two years later I decided to deepen my technical skills by doing an msc in design informatics at uni of edinburgh, ever since I've been writing code daily, improving my knowledge of UI and web development and working as a design technologist. 
-
-My ideal conditions:
+My ideal job conditions:
 - Above 4k net/month, 3.5k minimum
 - WFH 80 percent
 - Flexible schedule: Being able to do sports every day, urban sports club membership
@@ -32,21 +34,6 @@ My publications:
 - Book, Co-Author: The Eigengrau Laboratory Book, 2016
 - Book: Bienal de Artes Mediales, Catalogue, 2017
 - Press: Punto Flotante: Lenguaje del tiempo en el espacio físico urbano, Archdaily México, 2016
-
-My experience is a mix of freelance dev work and consulting. I've only been employed by research and academic insututions and one agency, future corp. In the past I've been rejected from design engineer job applications because of my lack of experience with big companies and weird employment history.
-So I need to make the most of what I have. 
-
-Industries that interest me
-- Design innovation Consulting
-- Software development
-- Data visualization
-- Videogame development
-- CAD software
-- Interaction design
-- Aerospace
-- AI/Data science
-
-Not so interested in crypto, finance and nfts but open to opportunities if its interesting or there is fit.
 
 Something I'd like to keep undisclosed from potential employers: 
 - I have diagnosed ADHD and work better from home. I take medication and it helps a lot.
@@ -91,78 +78,105 @@ Brands I worked with during my time at FutureCorp:
 - Flemming Watches
 - Beige Pill Productions
 
-My master's dissertation title: Comfortable Interactions: Development and evaluation of a thermal comfort management tool for energy reductions in office buildings
-My master's dissertation abstract:
-Great energy reductions are expected to take place in order to ensure human habitabil- ity conditions and avoid environmental catastrophe, placing great challenges for most energy intensive systems that are co-dependent with human practices and habits. The present study focuses on systems that provide indoor human comfort, responsible for much energy consumption and greenhouse emissions. In particular, this study looks at office building heating systems and the complex institutional setting in which they must perform, by identifying and integrating inputs from varied and relevant stake- holders the present dissertation proposes and evaluates a thermal comfort management tool aimed towards energy reductions in workplace settings.
+Academic Background:
+MSc Dissertation: "Comfortable Interactions" - Developed and evaluated thermal comfort management tools for energy reduction in office buildings, focusing on sustainable solutions for workplace environments.
 
-Interesting things I did at futurecorp:
-- Saatchi & Saatchi: I was tasked to implement a form feature on their main marketing site but then found the current deployment was un-updatable. Had to do a big dependency cleanup and recreate the entire deployment pipeline. For this I used Docker and Azure, Nginx, Strapi and Nextjs. I created a self hosted nextjs server connected to strapi. With staging and production enviroments. This allowed me to keep the site updated with minimal downtime.
-- Dolce & Gabbana: I implemented a landing teaser site for their new collaboration with JDS development, for G&D branded hotel project in Miami.
-- Mario Testino: Maintenance to their main marketing/portfolio site.
-- Stink films: I managed the implementation of new features and maintenance to their main marketing site.
-- JDS Development Group: I maintained their website for the Brooklyn Tower project in Brooklyn, NY.
-- Flemming Watches: I implemented their new marketing website for their new watch collection. 
-- Beige Pill Productions: I implemented their new marketing website.
-- Misc: I got closely involved in managing projects both pre-existing and new, working closely with executives and creative directors for global clients. A lot of unrealized projects that were cancelled in the early stages.
+Notable Projects at FutureCorp:
+- Saatchi & Saatchi: Full deployment pipeline reconstruction (Docker, Azure, Nginx, Strapi, NextJS)
+- Luxury/Fashion: D&G Miami hotel project, Mario Testino portfolio
+- Real Estate: Brooklyn Tower (JDS Development)
+- Various marketing sites: Flemming Watches, Beige Pill Productions, Stink Films
+Key achievements: Technical debt resolution, deployment optimization, client relationship management
+
+Current Focus (2024):
+- Pursuing Front End Development Engineer role at AWS Commerce Platform (Berlin)
+- Have internal referral contact (UX Designer)
+- Preparing for technical assessment with emphasis on Amazon Leadership Principles
+
+Here is the job description for the role I'm applying to. Copied on from the original job post:
+
+Front End Development Engineer, AWS Commerce Platform
+
+DESCRIPTION
+Are you passionate about building high quality user interface and products that users find super efficient and powerful? If so, please read on about the opportunity to set a new standard for internal customer facing platform.
+
+AWS Commerce Platform (CP) provides the back- and front-end services that enable AWS Service teams to sell to AWS customers, as well as allowing AWS customers to purchase AWS Services and to understand and manage their infrastructure costs. Because we sit at the nexus of all AWS Services and end-customers, we work closely across all AWS teams to ensure that we offer a great customer experience.
+
+We are seeking software engineers focused on Web front-end application development, using the latest tools and technologies on the AWS ecosystem. A successful candidate will have a proven track record of turning customer needs into elegant, user-centric designs, as well as implementing those designs in the presentation layer by using smart, clean Web development patterns. UX Design experience is a plus.
+
+As a Front-End Engineer, you will contribute to all aspects of an agile software development lifecycle, including design, architecture, development, documentation, testing and operations. You will push your design and architecture limits by building and delivering production-quality Web user experiences that are secure, accessible, maintainable, scalable, performant, and operationally excellent. Taking pride in both the technical and business contribution of your work, you will have the opportunity to make a significant impact on our systems, our business, and our customers. You will design and implement new features, and be part of a team that is building the future of the cloud.
+
+In this role, you will…
+
+- Help define the system architecture, own and implement specific components, and help shape the overall experience.
+- Own and operate the systems that you build, based on real-time customer data and demanding service-level agreements.
+- Collaborate closely with UX Designers, Product Managers, and generalist Software Development Engineers on the same team to help define the scope of the product.
+- Contribute to planning, design, implementation, testing, operations, and process improvement as a member of an autonomous team.
+- Take responsibility for technical problem-solving, creatively meeting product goals, and developing best practices.
+- You will design and develop MVC based web applications.
+- Write high-quality, efficient, testable code in TypeScript, JavaScript and React JS.
+- Design Amazon scale tools to facilitate internal business.
+- Build highly available, secure systems that deal with confidential billing data.
+- Mentor and support the growth of other developers.
+- Find out what it takes to engineer systems for "Amazon Scale".
+
+Confidence can sometimes hold us back from applying for a job, but we'll let you in on a secret: there's no such thing as a “perfect” candidate. We are an equal opportunities employer, and we value your passion to discover, invent, simplify and build. We welcome applications from all members of society irrespective of age, gender, disability, sexual orientation, race, religion, or belief.
+
+Outside of working on some of the most impactful, cutting-edge technology in the world, what else can you expect when you join AWS?
+
+On-Call Responsibility
+
+As a team, we all share on-call responsibilities. We don’t like getting paged in the middle of the night or on the weekend, so we work to ensure that our systems are fault-tolerant. When we do get paged, we work together to resolve the root cause so that we don’t get paged for the same issue twice.
+
+About AWS
+
+Diverse Experiences
+AWS values diverse experiences. Even if you do not meet all of the qualifications and skills listed in the job description, we encourage candidates to apply. If your career is just starting, hasn’t followed a traditional path, or includes alternative experiences, don’t let it stop you from applying.
+
+Why AWS?
+Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud platform. We pioneered cloud computing and never stopped innovating — that’s why customers from the most successful startups to Global 500 companies trust our robust suite of products and services to power their businesses.
+
+Inclusive Team Culture
+Here at AWS, it’s in our nature to learn and be curious. Our employee-led affinity groups foster a culture of inclusion that empower us to be proud of our differences. Ongoing events and learning experiences, including our Conversations on Race and Ethnicity (CORE) and AmazeCon (gender diversity) conferences, inspire us to never stop embracing our uniqueness.
+
+Mentorship & Career Growth
+We’re continuously raising our performance bar as we strive to become Earth’s Best Employer. That’s why you’ll find endless knowledge-sharing, mentorship and other career-advancing resources here to help you develop into a better-rounded professional.
+
+Work/Life Balance
+We value work-life harmony. Achieving success at work should never come at the expense of sacrifices at home, which is why flexible work hours and arrangements are part of our culture. When we feel supported in the workplace and at home, there’s nothing we can’t achieve in the cloud.
+
+About the team
+Utility Computing (UC)
+
+AWS Utility Computing (UC) provides product innovations — from foundational services such as Amazon’s Simple Storage Service (S3) and Amazon Elastic Compute Cloud (EC2), to consistently released new product innovations that continue to set AWS’s services and features apart in the industry. As a member of the UC organization, you’ll support the development and management of Compute, Database, Storage, Internet of Things (Iot), Platform, and Productivity Apps services in AWS, including support for customers who require specialized security solutions for their cloud services.
+
+BASIC QUALIFICATIONS
+- 4+ years of non-internship professional software development experience with Web applications.
+- Proficiency in foundational tools for Web application development such as HTML, CSS, JavaScript, TypeScript.
+- Experience with frameworks for front-end Web application development such as React JS, Angular.
+- Experience with front-end testing frameworks such as Jest, Mocha, Jasmine, Selenium, Cypress.
+
+PREFERRED QUALIFICATIONS
+- Experience building rich data-driven web applications by consuming ReSTful services and APIs.
+- Experience in developing or participating in UX design reviews.
+- Genuinely excited about technology, with a strong interest in learning and playing with the latest technologies, and building compelling Web applications and UIs.
 
 
-Update: 
-- I've applied to a Front End Development Engineer position at AWS Commerce Platform in Amazon Berlin. Yesterday I got an email with a link to the online assessment. Which is the first step in the process. I'm very excited about this opportunity and want to make the most of it. Even if I dont get it.
-- I have an insider at Amazon Berlin, she works there as UX designer and is willing to help me with the process.
-- I have a week to complete the online assessment. Today I'm starting to prepare for it. I have succesfully completed other technical assessments for other companies so I'm confident I can do it. But I still need to prepare, of course. The first thing she recommended is to go over the leadership principles because of the emphasis placed at amazon on them.
 
-Here are the steps in the process:
-
-1: Online assessment
-You’ll have 90 minutes to answer two technical questions. You’ll then complete 20 minutes of systems design scenarios and an 8-minute multiple choice work style survey related to our Leadership Principles.
-
-Coding
-Your online assessment will include a coding and system design challenge.
-
-Try this sample coding challenge to get comfortable with the environment and practice some questions.
-
-Once the 90-minute timer starts, it doesn’t stop, even if you exit. Check the timer regularly.
-Efficiency and optimization earn more points than brute-force solutions.
-Your code must compile for all questions in order for you to move forward in the interview process. Test your code and ensure it runs before you submit it or before time runs out.
-You can compile your code as many times as you like, but there must be a 15-second interval between consecutive compilations.
-Ensure your solutions consider all edge cases and handle large inputs effectively.
-You will need to use JavaScript when answering the questions.
-
-2: Technical phone screening
-Your technical phone screening will be with a leader on our team. It will last 60 minutes. Half of the time will be spent on questions that focus on our Leadership Principles and the other half will be spent on front-end coding problems.
-
-3: Interview loop
-Your loop will include four 55-minute interviews where you’ll meet with members of our software development community.
-
-You’ll have the chance to discuss your experiences and expertise in several areas that help us determine success at Amazon.
-
-These areas include both technical competencies and non-technical competencies that are based off of our Leadership Principles, which different interviewers will be assigned to evaluate.
-
-
-Other relevant information on FEE interview prep:
-
-System design
-At Amazon, designing front-end systems is unique due to our size and speed. Expect at least one question on front-end systems design.
-
-Your interviewer will ask questions related to your design, and you should ask questions to complete and validate your design.
-
-
-Front-end coding
-Expect to be asked to write syntactically correct code—no pseudo code. If you feel a bit rusty coding without an IDE or coding in a specific language, it’s a good idea to dust off the cobwebs and get comfortable coding with Livecode.
-
-The most important thing an FEE does at Amazon is write scalable, robust, and well-tested code. These are the main evaluation criteria. Also check for edge cases and validate that no bad input can slip through.
-
-Behavioral interview
-A significant portion of the conversation will focus on how you’ve demonstrated our Leadership Principles in your past jobs. This is because past behavior is an indicator of future success. We won’t ask brain teasers. Instead, we’ll focus on the ‘what’ and ‘how’ of your experiences, as well as the ‘why’ of your decisions.
-
-Each interviewer will typically ask two or three behavioral-based questions about successes or challenges and how you handled them using our Leadership Principles.
-
-How to prepare
-First, think about your most memorable experiences in your previous jobs and recall specific details. Amazon is a data-driven company, so your answers should include metrics or data where applicable. Then, consider how you applied the Leadership Principles in your experiences.
-
-Have examples that showcase your expertise and demonstrate how you’ve taken risks, succeeded, failed and grown. Make sure your answers are well-structured. Use the STAR method to frame your responses.
-
-
-
-
-
+Amazon Leadership principles:
+- Customer Obsession: Leaders start with the customer and work backwards. They work vigorously to earn and keep customer trust. Although leaders pay attention to competitors, they obsess over customers.
+- Ownership: Leaders are owners. They think long term and don’t sacrifice long-term value for short-term results. They act on behalf of the entire company, beyond just their own team. They never say “that’s not my job.”
+- Invent and Simplify: Leaders expect and require innovation and invention from their teams and always find ways to simplify. They are externally aware, look for new ideas from everywhere, and are not limited by “not invented here.” As we do new things, we accept that we may be misunderstood for long periods of time.
+- Are Right, A Lot: Leaders are right a lot. They have strong judgment and good instincts. They seek diverse perspectives and work to disconfirm their beliefs.
+- Learn and Be Curious: Leaders are never done learning and always seek to improve themselves. They are curious about new possibilities and act to explore them.
+- Hire and Develop the Best: (Secondary, according to my contact)
+- Insist on the Highest Standards: Leaders have relentlessly high standards — many people may think these standards are unreasonably high. Leaders are continually raising the bar and drive their teams to deliver high quality products, services, and processes. Leaders ensure that defects do not get sent down the line and that problems are fixed so they stay fixed.
+- Think Big: Thinking small is a self-fulfilling prophecy. Leaders create and communicate a bold direction that inspires results. They think differently and look around corners for ways to serve customers.
+- Bias for Action: Speed matters in business. Many decisions and actions are reversible and do not need extensive study. We value calculated risk taking.
+- Frugality: Accomplish more with less. Constraints breed resourcefulness, self-sufficiency, and invention. There are no extra points for growing headcount, budget size, or fixed expense.
+- Earn Trust: Leaders listen attentively, speak candidly, and treat others respectfully. They are vocally self-critical, even when doing so is awkward or embarrassing. Leaders do not believe their or their team’s body odor smells of perfume. They benchmark themselves and their teams against the best.
+- Dive Deep: Leaders operate at all levels, stay connected to the details, audit frequently, and are skeptical when metrics and anecdote differ. No task is beneath them.
+- Have Backbone; Disagree and Commit: Leaders are obligated to respectfully challenge decisions when they disagree, even when doing so is uncomfortable or exhausting. Leaders have conviction and are tenacious. They do not compromise for the sake of social cohesion. Once a decision is determined, they commit wholly.
+- Deliver Results: Leaders focus on the key inputs for their business and deliver them with the right quality and in a timely fashion. Despite setbacks, they rise to the occasion and never settle.
+- Strive to be Earth’s Best Employer: (Secondary, according to my contact)
+- Success and Scale Bring Broad Responsibility

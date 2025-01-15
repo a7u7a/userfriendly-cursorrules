@@ -1,0 +1,168 @@
+<!-- markdownlint-disable -->
+About me:
+
+I'm a Chilean citizen living in Berlin with a freelance visa and residence permit for 1.5 years. I work as design technologist with background in strategic design and msc in design informatics from uni of edinburgh. I dont know yet if I'll stay in Berlin for the long termor move to another country/city.
+I'm looking for a full time job in Berlin or remote. I'm also open to freelance work and collaborations. I've been coding web apps for 3 years in react and have experience with python jupyter notebooks and data wrangling. I'm interested in design and technology.
+
+My languages:
+- Spanish: Native
+- English: Fluent
+- German: B1 (I learned in high school and was able to speak better than my current level, I believe I can improve fast with some practice and exposure)
+
+Current public bio:
+I'm a design technologist and web developer bridging the gap between design and code to craft exceptional digital experiences. I help brands, cultural institutions, and agencies develop custom solutions and non-default interfaces, from interactive installations to data visualizations and cloud-based applications. Through close collaboration and strategic technology choices, I transform complex technical challenges into elegant, user-centered solutions that deliver immediate value.
+
+My profile is more generalist but Im happy to jump into details and optimize. I like to write high quality code that is maintainable and scalable.
+
+My current professional situation is that I have experience as a dev for marketing and research projects but I want to grow my skills towards tech companies or startups that do more complex and technically interesting projects that are used by a lot of people.
+
+I started coding in Arduino and Grasshopper3d for Rhino in 2014 while studying design in Chile.Two years later I decided to deepen my technical skills by doing an msc in design informatics at uni of edinburgh, ever since I've been writing code daily, improving my knowledge of UI and web development and working as a design technologist. 
+
+My ideal conditions:
+- Above 4k net/month, 3.5k minimum
+- WFH 80 percent
+- Flexible schedule: Being able to do sports every day, urban sports club membership
+- Work from Chile sometimes
+- Work distribution: Ideally a max of 30 percent design work, the rest is dev.
+
+My publications:
+- Conference Paper, Co-author: Push-Pull Energy Futures: Using Design to Discuss Agency in Distributed Energy Systems, Designing Interactive Systems 2023
+- Conference Paper, Co-Author: Exploring critical scenarios of algorithmic energy distribution with the Karma Kettle Game, Designing Interactive Systems 2020
+- Conference Poster, Co-author: Using Data Visualization to Explore International Trade Agreements, Digital Humanities Conference, 2019
+- Book, Co-Author: The Eigengrau Laboratory Book, 2016
+- Book: Bienal de Artes Mediales, Catalogue, 2017
+- Press: Punto Flotante: Lenguaje del tiempo en el espacio físico urbano, Archdaily México, 2016
+
+My experience is a mix of freelance dev work and consulting. I've only been employed by research and academic insututions and one agency, future corp. In the past I've been rejected from design engineer job applications because of my lack of experience with big companies and weird employment history.
+So I need to make the most of what I have. 
+
+Industries that interest me
+- Design innovation Consulting
+- Software development
+- Data visualization
+- Videogame development
+- CAD software
+- Interaction design
+- Aerospace
+- AI/Data science
+
+Not so interested in crypto, finance and nfts but open to opportunities if its interesting or there is fit.
+
+Something I'd like to keep undisclosed from potential employers: 
+- I have diagnosed ADHD and work better from home. I take medication and it helps a lot.
+- I think I have autism or something that looks like it. I'm not sure but my symptoms fit.
+
+My stack:
+- React
+- Python
+- Typescript
+- Next.js
+- Tailwind
+- Pandas
+- Jupyter
+- GSAP
+- React-three-fiber
+- Framer Motion
+- Sanity
+- Supabase
+- Figma
+- D3.js
+- Docker
+- Git
+- Linux
+
+Notable Clients:
+- FutureCorp
+- Elemental Chile
+- Asimov Consulting
+- Viapontica AI
+- The Egg Assembly
+- TrainFES
+- School of Informatics, U. of Edinburgh
+- School of Engineering, PUC, Chile
+- Centro de innovacion Anacleto Angelini, PUC, Chile
+
+Brands I worked with during my time at FutureCorp:
+- Mario Testino
+- Stink Films
+- Saatchi & Saatchi
+- Dolce & Gabbana
+- JDS Development Group (The Brooklyn Tower website)
+- Flemming Watches
+- Beige Pill Productions
+
+My master's dissertation title: Comfortable Interactions: Development and evaluation of a thermal comfort management tool for energy reductions in office buildings
+My master's dissertation abstract:
+Great energy reductions are expected to take place in order to ensure human habitabil- ity conditions and avoid environmental catastrophe, placing great challenges for most energy intensive systems that are co-dependent with human practices and habits. The present study focuses on systems that provide indoor human comfort, responsible for much energy consumption and greenhouse emissions. In particular, this study looks at office building heating systems and the complex institutional setting in which they must perform, by identifying and integrating inputs from varied and relevant stake- holders the present dissertation proposes and evaluates a thermal comfort management tool aimed towards energy reductions in workplace settings.
+
+Interesting things I did at futurecorp:
+- Saatchi & Saatchi: I was tasked to implement a form feature on their main marketing site but then found the current deployment was un-updatable. Had to do a big dependency cleanup and recreate the entire deployment pipeline. For this I used Docker and Azure, Nginx, Strapi and Nextjs. I created a self hosted nextjs server connected to strapi. With staging and production enviroments. This allowed me to keep the site updated with minimal downtime.
+- Dolce & Gabbana: I implemented a landing teaser site for their new collaboration with JDS development, for G&D branded hotel project in Miami.
+- Mario Testino: Maintenance to their main marketing/portfolio site.
+- Stink films: I managed the implementation of new features and maintenance to their main marketing site.
+- JDS Development Group: I maintained their website for the Brooklyn Tower project in Brooklyn, NY.
+- Flemming Watches: I implemented their new marketing website for their new watch collection. 
+- Beige Pill Productions: I implemented their new marketing website.
+- Misc: I got closely involved in managing projects both pre-existing and new, working closely with executives and creative directors for global clients. A lot of unrealized projects that were cancelled in the early stages.
+
+
+Update: 
+- I've applied to a Front End Development Engineer position at AWS Commerce Platform in Amazon Berlin. Yesterday I got an email with a link to the online assessment. Which is the first step in the process. I'm very excited about this opportunity and want to make the most of it. Even if I dont get it.
+- I have an insider at Amazon Berlin, she works there as UX designer and is willing to help me with the process.
+- I have a week to complete the online assessment. Today I'm starting to prepare for it. I have succesfully completed other technical assessments for other companies so I'm confident I can do it. But I still need to prepare, of course. The first thing she recommended is to go over the leadership principles because of the emphasis placed at amazon on them.
+
+Here are the steps in the process:
+
+1: Online assessment
+You’ll have 90 minutes to answer two technical questions. You’ll then complete 20 minutes of systems design scenarios and an 8-minute multiple choice work style survey related to our Leadership Principles.
+
+Coding
+Your online assessment will include a coding and system design challenge.
+
+Try this sample coding challenge to get comfortable with the environment and practice some questions.
+
+Once the 90-minute timer starts, it doesn’t stop, even if you exit. Check the timer regularly.
+Efficiency and optimization earn more points than brute-force solutions.
+Your code must compile for all questions in order for you to move forward in the interview process. Test your code and ensure it runs before you submit it or before time runs out.
+You can compile your code as many times as you like, but there must be a 15-second interval between consecutive compilations.
+Ensure your solutions consider all edge cases and handle large inputs effectively.
+You will need to use JavaScript when answering the questions.
+
+2: Technical phone screening
+Your technical phone screening will be with a leader on our team. It will last 60 minutes. Half of the time will be spent on questions that focus on our Leadership Principles and the other half will be spent on front-end coding problems.
+
+3: Interview loop
+Your loop will include four 55-minute interviews where you’ll meet with members of our software development community.
+
+You’ll have the chance to discuss your experiences and expertise in several areas that help us determine success at Amazon.
+
+These areas include both technical competencies and non-technical competencies that are based off of our Leadership Principles, which different interviewers will be assigned to evaluate.
+
+
+Other relevant information on FEE interview prep:
+
+System design
+At Amazon, designing front-end systems is unique due to our size and speed. Expect at least one question on front-end systems design.
+
+Your interviewer will ask questions related to your design, and you should ask questions to complete and validate your design.
+
+
+Front-end coding
+Expect to be asked to write syntactically correct code—no pseudo code. If you feel a bit rusty coding without an IDE or coding in a specific language, it’s a good idea to dust off the cobwebs and get comfortable coding with Livecode.
+
+The most important thing an FEE does at Amazon is write scalable, robust, and well-tested code. These are the main evaluation criteria. Also check for edge cases and validate that no bad input can slip through.
+
+Behavioral interview
+A significant portion of the conversation will focus on how you’ve demonstrated our Leadership Principles in your past jobs. This is because past behavior is an indicator of future success. We won’t ask brain teasers. Instead, we’ll focus on the ‘what’ and ‘how’ of your experiences, as well as the ‘why’ of your decisions.
+
+Each interviewer will typically ask two or three behavioral-based questions about successes or challenges and how you handled them using our Leadership Principles.
+
+How to prepare
+First, think about your most memorable experiences in your previous jobs and recall specific details. Amazon is a data-driven company, so your answers should include metrics or data where applicable. Then, consider how you applied the Leadership Principles in your experiences.
+
+Have examples that showcase your expertise and demonstrate how you’ve taken risks, succeeded, failed and grown. Make sure your answers are well-structured. Use the STAR method to frame your responses.
+
+
+
+
+
