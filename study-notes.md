@@ -11,6 +11,8 @@ Some study notes for the FEE at AWS application
 - Quadratic -> O(n²)
 - Exponential -> O(2ⁿ)
 
+![Time complexity graph](/imgs/time_complex.jpeg)
+
 ## Data structures
 
 ### Arrays and Objects
