@@ -178,3 +178,137 @@ Amazon Leadership principles:
 - Deliver Results: Leaders focus on the key inputs for their business and deliver them with the right quality and in a timely fashion. Despite setbacks, they rise to the occasion and never settle.
 - Strive to be Earth’s Best Employer: (Secondary, according to my contact)
 - Success and Scale Bring Broad Responsibility
+
+
+
+
+Current stage of the application: Phone interview coming, tbd.
+
+Here is what the amazon hiring docs say about the coming phone interview:
+Behavioral-based interviewing
+Our interviews are rooted in behavioral-based questions. These questions ask about past situations or challenges you’ve faced and how you handled them, using Leadership Principles to guide the discussion.
+
+We avoid brain teasers (e.g., “How many windows are in Manhattan?”). We’ve researched this approach and have found that those types of questions are unreliable when it comes to predicting success at Amazon.
+
+Here are some examples of behavioral-based questions:
+
+1. Tell me about a time when you were faced with a problem that had a number of possible solutions. What was the problem and how did you determine the course of action? What was the outcome?
+
+2. When did you take a risk, make a mistake, or fail? How did you respond, and how did you grow?
+
+3. Describe a time you took the lead on a project.
+
+4. What did you do when you needed to motivate a group of people or promote collaboration on a project?
+
+5. How have you used data to develop a strategy?
+
+When you respond, be sure to focus on the question asked. Ensure your answer is well-structured and provide examples using metrics or data if applicable. Reference recent situations whenever possible.
+
+End of docs
+
+
+
+Software development portfolio: Project descriptions taken from my personal portfolio website.
+
+Selected Work
+
+BeigePill Productions
+What: Next.js Site
+2024
+Design: FutureCorp
+Stack: WebGL, GSAP, Next.js, Sanity CMS, MUX API
+Project description:
+I was tasked with building the design system for BeigePill's new website, designed by FutureCorp. Starting from a simple concept and developing it into a performant, full-screen animation.
+
+The current approach uses WebGL's stencil buffer to create the mask and GSAP to control it. Enabling Beige Pill to present their work in line with their premium brand identity. Special thanks to Jack Wild for his technical guidance.
+
+Elemental Chile
+What: Next.js Web App
+2024
+Stack: Next.js, TypeScript, Sanity CMS
+A minimal site for Elemental Chile, led by Pritzker prize winning architect Alejandro Aravena. They wanted something that felt like an internal tool - brutalist and early-internet inspired. The challenge was to showcase 200+ projects in a way that worked for stakeholder meetings.
+
+The result is a custom app which syncs content from their internal database to a Sanity backend, making it easy for them to keep the site updated. Coupled with a global search feature. Helping people discover connections across their diverse body of work.
+
+
+PESE.works
+Three.js + React Site
+2022
+StackR3F, TypeScript, Next.js.
+Type: Portfolio site
+For this site we repurposed a model Pedro created for an exhibition project in Berlin. There was something interesting between the sterile view of the simulation and the photos of the real world objects he wanted to show.
+
+I had to make this little tool to help me find the right animation parameters for making the little scroll-dance between lights, camera and 🌷
+
+
+Catalina Andonie Portfolio
+What: Fullscreen WebGL on React
+2022
+Stack: StackNext.js, TypeScript, WebGL
+Type: Portfolio site
+There's a lot of glass and refracting materials in Catalina's work. It seemed like a good opportunity for exploring what could be achieved using fragment shaders on the web.
+
+Projects like this humble you by teaching you that it's one thing to get a cool result by experimentation, but aiming for a specific output is a very different task. Thankfully we have TBoS.
+
+
+Experimental Work
+
+Scroller Series
+Python-based display controller for Raspberry Pi
+2022
+Stack:Python, Pandas, RPi, World Bank API, Yahoo Finance, Supabase
+Comissioned by: Ignacio Gatica
+Controller for a custom LED, infinite-scrolling, financial ticker display. Later extended to work with country data, such as international debt and GDP.
+
+The piece explores the significance of money on a planetary scale and has been featured by The Washington Post and Frieze. More info.
+
+
+Particle simulation
+2021
+Stack: Three.js, Observable
+What: Boids particle simulation
+I implemented this boids simulation as part of my journey of learning graphics programming for the web. I was kind of obsessed with code notebooks at the time and ended up using Observable.
+
+As a bonus, I added my take on wind effect using 3D perlin noise vector fields. During the process I also made a lot of smaller notebooks with tests, adapted mostly from The Nature of Code book.
+
+
+
+Comfortable Interactions
+stack: Python, User Research
+2019
+Tools: E-paper display, Raspberry Pi, Python, P5.js
+What?Alternative interfaces for energy efficiency
+Can buildings use natural language to explain what it's doing to keep you warm during winter? Can it give you strategies to make yourself comfortable?
+
+In this project I used HCI research methods to develop and evaluate an interface which lets users communicate with buildings with the goal of improving comfort and lowering energy use. Referencing the interesting work of Stewart Brand, Adrian Clear and Elizabeth Shove.
+
+
+
+Fringeless Project
+2019
+Tools: Python, Google Maps API, thermal printer
+What: Generative instructions for city discovery
+A fun experiment during DwD week: While living in Edinburgh you realize how much locals dislike when the city gets overrun by tourists during the Fringe Festival.
+
+As a response, we built this tool using Google Maps API, a thermal printer and a handcrafted dataset of interesting locations. It generated unique navigation instructions in puzzle form to get you to the least-crowded-but-still-fun place.
+
+
+
+Punto Flotante
+Stack: Arduino, Grasshopper3D for Rhino + Ladybug Plugin
+2017
+Tools: Grasshopper3D, Arduino
+What: Solar clock
+
+At the time, I was very interested in forms of screenless tech; I had the opportunity to explore this during a residency at Eigengrau Lab, where I built these computer-controlled mirrors.
+
+Hidden from pedestrian's view, they would reflect the light to a nearby facade, drawing an elliptical pattern each hour through the day. The project was exhibited during the 12th Media Art Biennale 2017, Santiago.
+
+
+
+
+
+
+
+
+
