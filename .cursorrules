@@ -206,9 +206,8 @@ When you respond, be sure to focus on the question asked. Ensure your answer is 
 
 End of docs
 
-
-
-Software development portfolio: Project descriptions taken from my personal portfolio website.
+Notable projects:
+Project descriptions taken from my personal portfolio website where I show my software development work.
 
 Selected Work
 
@@ -219,7 +218,6 @@ Design: FutureCorp
 Stack: WebGL, GSAP, Next.js, Sanity CMS, MUX API
 Project description:
 I was tasked with building the design system for BeigePill's new website, designed by FutureCorp. Starting from a simple concept and developing it into a performant, full-screen animation.
-
 The current approach uses WebGL's stencil buffer to create the mask and GSAP to control it. Enabling Beige Pill to present their work in line with their premium brand identity. Special thanks to Jack Wild for his technical guidance.
 
 Elemental Chile
@@ -227,9 +225,7 @@ What: Next.js Web App
 2024
 Stack: Next.js, TypeScript, Sanity CMS
 A minimal site for Elemental Chile, led by Pritzker prize winning architect Alejandro Aravena. They wanted something that felt like an internal tool - brutalist and early-internet inspired. The challenge was to showcase 200+ projects in a way that worked for stakeholder meetings.
-
 The result is a custom app which syncs content from their internal database to a Sanity backend, making it easy for them to keep the site updated. Coupled with a global search feature. Helping people discover connections across their diverse body of work.
-
 
 PESE.works
 Three.js + React Site
@@ -237,7 +233,6 @@ Three.js + React Site
 StackR3F, TypeScript, Next.js.
 Type: Portfolio site
 For this site we repurposed a model Pedro created for an exhibition project in Berlin. There was something interesting between the sterile view of the simulation and the photos of the real world objects he wanted to show.
-
 I had to make this little tool to help me find the right animation parameters for making the little scroll-dance between lights, camera and 🌷
 
 
@@ -247,9 +242,7 @@ What: Fullscreen WebGL on React
 Stack: StackNext.js, TypeScript, WebGL
 Type: Portfolio site
 There's a lot of glass and refracting materials in Catalina's work. It seemed like a good opportunity for exploring what could be achieved using fragment shaders on the web.
-
 Projects like this humble you by teaching you that it's one thing to get a cool result by experimentation, but aiming for a specific output is a very different task. Thankfully we have TBoS.
-
 
 Experimental Work
 
@@ -259,7 +252,6 @@ Python-based display controller for Raspberry Pi
 Stack:Python, Pandas, RPi, World Bank API, Yahoo Finance, Supabase
 Comissioned by: Ignacio Gatica
 Controller for a custom LED, infinite-scrolling, financial ticker display. Later extended to work with country data, such as international debt and GDP.
-
 The piece explores the significance of money on a planetary scale and has been featured by The Washington Post and Frieze. More info.
 
 
@@ -268,9 +260,7 @@ Particle simulation
 Stack: Three.js, Observable
 What: Boids particle simulation
 I implemented this boids simulation as part of my journey of learning graphics programming for the web. I was kind of obsessed with code notebooks at the time and ended up using Observable.
-
 As a bonus, I added my take on wind effect using 3D perlin noise vector fields. During the process I also made a lot of smaller notebooks with tests, adapted mostly from The Nature of Code book.
-
 
 
 Comfortable Interactions
@@ -279,9 +269,7 @@ stack: Python, User Research
 Tools: E-paper display, Raspberry Pi, Python, P5.js
 What?Alternative interfaces for energy efficiency
 Can buildings use natural language to explain what it's doing to keep you warm during winter? Can it give you strategies to make yourself comfortable?
-
 In this project I used HCI research methods to develop and evaluate an interface which lets users communicate with buildings with the goal of improving comfort and lowering energy use. Referencing the interesting work of Stewart Brand, Adrian Clear and Elizabeth Shove.
-
 
 
 Fringeless Project
@@ -289,9 +277,7 @@ Fringeless Project
 Tools: Python, Google Maps API, thermal printer
 What: Generative instructions for city discovery
 A fun experiment during DwD week: While living in Edinburgh you realize how much locals dislike when the city gets overrun by tourists during the Fringe Festival.
-
 As a response, we built this tool using Google Maps API, a thermal printer and a handcrafted dataset of interesting locations. It generated unique navigation instructions in puzzle form to get you to the least-crowded-but-still-fun place.
-
 
 
 Punto Flotante
@@ -299,16 +285,5 @@ Stack: Arduino, Grasshopper3D for Rhino + Ladybug Plugin
 2017
 Tools: Grasshopper3D, Arduino
 What: Solar clock
-
 At the time, I was very interested in forms of screenless tech; I had the opportunity to explore this during a residency at Eigengrau Lab, where I built these computer-controlled mirrors.
-
 Hidden from pedestrian's view, they would reflect the light to a nearby facade, drawing an elliptical pattern each hour through the day. The project was exhibited during the 12th Media Art Biennale 2017, Santiago.
-
-
-
-
-
-
-
-
-
