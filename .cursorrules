@@ -81,12 +81,17 @@ Brands I worked with at FutureCorp:
 Academic Background:
 MSc Dissertation: "Comfortable Interactions" - Developed and evaluated thermal comfort management tools for energy reduction in office buildings, focusing on sustainable solutions for workplace environments.
 
-Notable Projects at FutureCorp:
+Notable projects developed at FutureCorp:
 - Saatchi & Saatchi: Full deployment pipeline reconstruction (Docker, Azure, Nginx, Strapi, NextJS)
-- Luxury/Fashion: D&G Miami hotel project, Mario Testino portfolio
+- Luxury/Fashion: 
+  - Dolce & Gabbana + JDS Development: Miami Hotel project landing page
+  - Mario Testino portfolio. Maintenance, legacy code (+12 years old Wordpress setup)
 - Real Estate: Brooklyn Tower (JDS Development)
-- Various marketing sites: Flemming Watches, Beige Pill Productions, Stink Films
-Key achievements: Technical debt resolution, deployment optimization, client relationship management
+- Various marketing sites: 
+  - Flemming Watches (High end swiss made watches)
+  - Beige Pill Productions (London based creative studio)
+  - Stink Films (Award winning production company)
+Key achievements: New developments using high-end tech stacks, mentoring interns, technical debt resolution, deployment optimization, client relationship management, tech lead.
 
 Current Focus (2024):
 - Pursuing Front End Development Engineer role at AWS Commerce Platform (Berlin)
@@ -181,10 +186,11 @@ Amazon Leadership principles:
 
 
 
-
 Current stage of the application: Phone interview coming, tbd.
 
 Here is what the amazon hiring docs say about the coming phone interview:
+Your technical phone screening will be with a leader on our team. It will last 60 minutes. Half of the time will be spent on questions that focus on our Leadership Principles and the other half will be spent on front-end coding problems.
+
 Behavioral-based interviewing
 Our interviews are rooted in behavioral-based questions. These questions ask about past situations or challenges you’ve faced and how you handled them, using Leadership Principles to guide the discussion.
 
@@ -203,6 +209,33 @@ Here are some examples of behavioral-based questions:
 5. How have you used data to develop a strategy?
 
 When you respond, be sure to focus on the question asked. Ensure your answer is well-structured and provide examples using metrics or data if applicable. Reference recent situations whenever possible.
+
+Familiarize yourself with Amazon’s Leadership Principles for behavioral questions. There’s no need to memorize them.
+Prepare a few specific examples related to your recent projects, team interactions, and product deliveries (avoid confidential information).
+Emphasize the importance of data and analytics in supporting your decisions, as Amazon is data-driven.
+Highlight how your decisions or projects impacted customers and stakeholders, demonstrating customer obsession.
+
+Technical phone screening
+Your technical phone screening will be with a leader on our team. It will last 60 minutes. Half of the time will be spent on questions that focus on our Leadership Principles and the other half will be spent on front-end coding problems.
+Coding
+Problem solving: We’re evaluating how you comprehend and explain complex ideas. Are you providing the reasoning behind a particular solution?
+Developing and comparing multiple solutions: Are you using appropriate data structures? Are you speaking about space and time complexity?
+Coding: Can you convert solutions to executable code? Is the code organized and does it have the right logical structure? Is the HTML you’re writing semantic and does it follow Web Standards?
+Verification: Are you considering a reasonable number of test cases or coming up with a good argument for why your code is correct?
+Communication: Are you asking for requirements and clarity when necessary, or are you just diving into the code? Don’t forget to ask questions.
+Thinking big: Is the code you’re writing going to scale for one or any type of user? Have you considered accessibility implications? Can your user interact with the application you have written without the need for a mouse?
+
+Tips
+Be familiar and ready to solve technical questions on concepts like front-end application design, data structures, and algorithms. This will likely include qualifying requirements, checking edge cases, and white boarding your solutions with our engineers. Phone screenings tend not to be as in-depth as interview loops.
+Be prepared to discuss technologies listed on your resume, e.g. if you list JavaScript or Ruby as technical competencies, expect technical questions about your experiences with these technologies. It’s helpful to review the job description before your interview to align your qualifications against the job’s specific requirements and responsibilities. When listing frameworks, be prepared to speak about these in depth and compare to other frameworks.
+Brush up on problem solving and computer science fundamentals. “Cracking the coding interview” is a good read.
+Share details of your previous and current experiences; be specific and avoid being too high level.
+Talk about decisions you personally made and why you made those decisions. Use “I” and not “we.”
+Talk about scope and how you delivered the end result (don’t just explain how the system works).
+Examples should explain what the impact (end result) was. Provide examples that have significant impact.
+For failure-related questions, it’s okay to be self-critical. Share what you learned, how you recovered, and how you grew.
+Include metrics or data and be prepared for follow-up questions.
+
 
 End of docs
 
@@ -267,7 +300,7 @@ Comfortable Interactions
 stack: Python, User Research
 2019
 Tools: E-paper display, Raspberry Pi, Python, P5.js
-What?Alternative interfaces for energy efficiency
+What: Alternative interfaces for energy efficiency
 Can buildings use natural language to explain what it's doing to keep you warm during winter? Can it give you strategies to make yourself comfortable?
 In this project I used HCI research methods to develop and evaluate an interface which lets users communicate with buildings with the goal of improving comfort and lowering energy use. Referencing the interesting work of Stewart Brand, Adrian Clear and Elizabeth Shove.
 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .table-container {
+        margin: 20px;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th.sortable {
+        cursor: pointer;
+      }
+      th.sortable:hover {
+        background-color: #f5f5f5;
+      }
+      .selected {
+        background-color: #e6f3ff;
+      }
+
+      #pagination {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        align-items: center;
+      }
+
+      #pagination button {
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      #pagination button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+
+      /* Add hover state for rows */
+      tbody tr:hover {
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="table-container">
+      <div id="table-controls">
+        <input type="text" id="filter" placeholder="Filter items..." />
+      </div>
+      <table id="data-table">
+        <thead>
+          <tr></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div id="pagination"></div>
+    </div>
+    <script src="table.js"></script>
+  </body>
+</html>
