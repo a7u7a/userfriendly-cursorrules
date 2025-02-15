@@ -17,9 +17,24 @@
       }
       th.sortable {
         cursor: pointer;
+        position: relative;
+        padding-right: 25px; /* Make room for sort indicator */
       }
       th.sortable:hover {
         background-color: #f5f5f5;
+      }
+      .sort-indicator {
+        position: absolute;
+        right: 8px;
+
+        color: #666;
+      }
+      th.sortable:hover {
+        background-color: #f5f5f5;
+      }
+
+      th.sortable:hover .sort-indicator {
+        color: #333;
       }
       .selected {
         background-color: #e6f3ff;

@@ -8,25 +8,24 @@ class DataTable {
     this.sortColumn = null;
     this.sortDirection = 'asc';
 
-    this.init();
-  }
+    this.sortConfig = {
+      column: null,
+      direction: null // null, 'asc', or 'desc'
+    };
 
-  init() {
-    this.renderHeaders();
-    this.renderBody();
-    this.setupEventListeners();
+    this.init();
   }
 
   renderHeaders() {
     const headerRow = this.container.querySelector('thead tr');
     headerRow.innerHTML = this.config.columns
       .map(column => `
-              <th class="${column.sortable ? 'sortable' : ''}" 
-                  data-key="${column.key}">
-                  ${column.label}
-                  ${column.sortable ? '<span class="sort-indicator"></span>' : ''}
-              </th>
-          `).join('');
+            <th class="${column.sortable ? 'sortable' : ''}" 
+                data-key="${column.key}">
+                ${column.label}
+                ${column.sortable ? '<span class="sort-indicator"></span>' : ''}
+            </th>
+        `).join('');
   }
 
   // Calculate total pages
@@ -36,9 +35,57 @@ class DataTable {
 
   // Get current page data
   getCurrentPageData() {
+    // First sort
+    let sortedData = [...this.data];
+    if (this.sortConfig.column) {
+      sortedData.sort((a, b) => {
+        const aVal = a[this.sortConfig.column];
+        const bVal = b[this.sortConfig.column];
+
+        return this.compareValues(aVal, bVal, this.sortConfig.direction);
+      });
+    }
+
+    // Then paginate
     const startIndex = (this.currentPage - 1) * this.config.itemsPerPage;
     const endIndex = startIndex + this.config.itemsPerPage;
-    return this.data.slice(startIndex, endIndex);
+    return sortedData.slice(startIndex, endIndex);
+  }
+
+  updateSortIndicators() {
+    const headers = this.container.querySelectorAll('th');
+    headers.forEach(header => {
+      const key = header.dataset.key;
+      const indicator = header.querySelector('.sort-indicator');
+      if (indicator) {
+        if (key === this.sortConfig.column) {
+          indicator.textContent = this.sortConfig.direction === 'asc' ? '+' : '-';
+        } else {
+          indicator.textContent = 'Sort';  // empty space
+        }
+      }
+    });
+  }
+
+  // Handle sort
+  handleSort(column) {
+    // If clicking the same column, cycle through: asc -> desc -> no sort
+    if (this.sortConfig.column === column) {
+      if (this.sortConfig.direction === 'asc') {
+        this.sortConfig.direction = 'desc';
+      } else if (this.sortConfig.direction === 'desc') {
+        this.sortConfig.column = null;
+        this.sortConfig.direction = null;
+      }
+    } else {
+      // New column, start with ascending
+      this.sortConfig.column = column;
+      this.sortConfig.direction = 'asc';
+    }
+
+    // Reset to first page when sorting
+    this.currentPage = 1;
+    this.updateTable();
   }
 
   // Render table body
@@ -82,10 +129,10 @@ class DataTable {
         `;
   }
 
-  // Update table
   updateTable() {
     this.renderBody();
     this.renderPagination();
+    this.updateSortIndicators();
   }
 
   setupEventListeners() {
@@ -100,33 +147,73 @@ class DataTable {
         this.updateTable();
       }
     });
+
+    this.container.querySelector('thead').addEventListener('click', (e) => {
+      console.log("clicked");
+      const header = e.target.closest('th');
+      if (header && header.classList.contains('sortable')) {
+        const column = header.dataset.key;
+        this.handleSort(column);
+      }
+    });
   }
 
   init() {
     this.renderHeaders();
-    this.updateTable(); // Changed from renderBody() to updateTable()
+    this.updateTable();
     this.setupEventListeners();
+  }
+
+  compareValues(a, b, direction) {
+    // Handle null/undefined values
+    if (a == null) return direction === 'asc' ? -1 : 1;
+    if (b == null) return direction === 'asc' ? 1 : -1;
+
+    // Detect value type and compare accordingly
+    if (typeof a === 'string' && typeof b === 'string') {
+      return direction === 'asc'
+        ? a.localeCompare(b)
+        : b.localeCompare(a);
+    }
+
+    // Handle numbers
+    if (typeof a === 'number' && typeof b === 'number') {
+      return direction === 'asc' ? a - b : b - a;
+    }
+
+    // Handle dates
+    if (a instanceof Date && b instanceof Date) {
+      return direction === 'asc'
+        ? a.getTime() - b.getTime()
+        : b.getTime() - a.getTime();
+    }
+
+    // Default comparison
+    return direction === 'asc'
+      ? String(a).localeCompare(String(b))
+      : String(b).localeCompare(String(a));
   }
 
 }
 
-// Test data
-const testData = Array.from({ length: 55 }, (_, index) => ({
-  id: index + 1,
-  name: `Product ${index + 1}`,
-  price: Math.floor(Math.random() * 1000),
-  category: ['Electronics', 'Books', 'Clothing'][Math.floor(Math.random() * 3)]
-}));
+// Test data with edge cases
+const testData = [
+  { id: 1, name: 'Product A', price: 100, date: new Date('2024-01-01') },
+  { id: 2, name: 'Product C', price: 50, date: new Date('2024-03-15') },
+  { id: 3, name: 'Product B', price: null, date: new Date('2024-02-01') },
+  { id: 4, name: 'Product D', price: 75, date: null },
+  { id: 5, name: null, price: 200, date: new Date('2024-01-15') },
+  { id: 6, name: 'Product É', price: 150, date: new Date('2024-02-15') }, // Unicode character
+  { id: 7, name: 'product a', price: 90, date: new Date('2024-03-01') }   // Case difference
+];
 
-// Configuration
 const config = {
   columns: [
     { key: 'name', label: 'Product Name', sortable: true },
     { key: 'price', label: 'Price', sortable: true },
-    { key: 'category', label: 'Category', sortable: true }
+    { key: 'date', label: 'Date', sortable: true }
   ],
   itemsPerPage: 10
 };
 
-// Initialize table
 const table = new DataTable('data-table', testData, config);
