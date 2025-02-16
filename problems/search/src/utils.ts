@@ -37,13 +37,10 @@ export function debounce<T extends (...args: any[]) => void>(
 ): (...args: Parameters<T>) => void {
   let timeoutId: ReturnType<typeof setTimeout>;
 
-  return function(this: ThisParameterType<T>, ...args: Parameters<T>) {
-    // Clear the existing timeout
+  return function(...args: Parameters<T>) {
     clearTimeout(timeoutId);
-
-    // Set a new timeout
     timeoutId = setTimeout(() => {
-      func.apply(this, args);
+      func(...args);
     }, delay);
   };
 }
