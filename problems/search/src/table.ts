@@ -1,5 +1,6 @@
 import { TableRow, TableConfig } from './types';
 import { testData, tableConfig } from './data';
+import { compareValues } from './utils';
 
 class DataTable {
   private container: HTMLElement | null;
@@ -23,6 +24,12 @@ class DataTable {
     };
 
     this.init();
+  }
+
+  init() {
+    this.renderHeaders();
+    this.updateTable();
+    this.setupEventListeners();
   }
 
   renderHeaders() {
@@ -49,7 +56,7 @@ class DataTable {
         const column = this.sortConfig.column as keyof TableRow;
         const aVal = a[column];
         const bVal = b[column];
-        return this.compareValues(aVal, bVal, this.sortConfig.direction);
+        return compareValues(aVal, bVal, this.sortConfig.direction);
       });
     }
 
@@ -112,6 +119,7 @@ class DataTable {
       this.config.columns.forEach(column => {
         const cell = document.createElement('td');
         const value = item[column.key];
+        console.log("value", value);
         cell.textContent = value?.toString() ?? '';
         row.appendChild(cell);
       });
@@ -170,42 +178,6 @@ class DataTable {
       }
       e.stopImmediatePropagation();
     });
-  }
-
-  init() {
-    this.renderHeaders();
-    this.updateTable();
-    this.setupEventListeners();
-  }
-
-  compareValues(aVal: any, bVal: any, direction: 'asc' | 'desc' | null) {
-    // Handle null/undefined values
-    if (aVal == null) return direction === 'asc' ? -1 : 1;
-    if (bVal == null) return direction === 'asc' ? 1 : -1;
-
-    // Detect value type and compare accordingly
-    if (typeof aVal === 'string' && typeof bVal === 'string') {
-      return direction === 'asc'
-        ? aVal.localeCompare(bVal)
-        : bVal.localeCompare(aVal);
-    }
-
-    // Handle numbers
-    if (typeof aVal === 'number' && typeof bVal === 'number') {
-      return direction === 'asc' ? aVal - bVal : bVal - aVal;
-    }
-
-    // Handle dates
-    if (aVal instanceof Date && bVal instanceof Date) {
-      return direction === 'asc'
-        ? aVal.getTime() - bVal.getTime()
-        : bVal.getTime() - aVal.getTime();
-    }
-
-    // Default comparison
-    return direction === 'asc'
-      ? String(aVal).localeCompare(String(bVal))
-      : String(bVal).localeCompare(String(aVal));
   }
 }
 
