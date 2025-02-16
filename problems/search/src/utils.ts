@@ -44,3 +44,28 @@ export function debounce<T extends (...args: any[]) => void>(
     }, delay);
   };
 }
+
+// Simulate network delay and potential failures
+export async function searchItems(
+  items: TableRow[], 
+  query: string, 
+  delay: number = 300
+): Promise<TableRow[]> {
+  // Simulate network delay
+  await new Promise(resolve => setTimeout(resolve, delay));
+
+  // Simulate random network error (1 in 20 chance)
+  if (Math.random() < 0.05) {
+    throw new Error('Network error');
+  }
+
+  // Case insensitive search across multiple fields
+  return items.filter(item => {
+    const searchStr = query.toLowerCase();
+    return (
+      item.name?.toLowerCase().includes(searchStr) ||
+      item.price?.toString().includes(searchStr) ||
+      item.date?.toLocaleDateString().includes(searchStr)
+    );
+  });
+}

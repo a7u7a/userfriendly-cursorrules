@@ -1,23 +1,28 @@
 import { TableRow, TableConfig } from './types';
 import { testData, tableConfig } from './data';
-import { compareValues, debounce } from './utils';
+import { compareValues, debounce, searchItems } from './utils';
 
 class DataTable {
   private container: HTMLElement | null;
   private data: TableRow[];
+  private filteredData: TableRow[];
   private config: TableConfig;
   private currentPage: number;
   private sortConfig: {
     column: string | null;
     direction: 'asc' | 'desc' | null;
   };
+  private isLoading: boolean;
+  private searchInput: HTMLInputElement | null;
 
   constructor(containerId: string, data: TableRow[], config: TableConfig) {
     this.container = document.getElementById(containerId);
     this.data = data;
     this.config = config;
+    this.filteredData = data;
     this.currentPage = 1;
-
+    this.isLoading = false;
+    this.searchInput = document.getElementById('filter') as HTMLInputElement;
     this.sortConfig = {
       column: null,
       direction: null
@@ -30,6 +35,27 @@ class DataTable {
     this.renderHeaders();
     this.updateTable();
     this.setupEventListeners();
+  }
+
+  private async handleSearch(query: string) {
+    try {
+      this.setLoading(true);
+      this.currentPage = 1;
+      this.filteredData = await searchItems(this.data, query);
+      this.updateTable();
+    } catch (error) {
+      console.error('Search failed:', error);
+    } finally {
+      this.setLoading(false);
+    }
+  }
+
+  private setLoading(loading: boolean) {
+    this.isLoading = loading; // Unused for now
+    const loadingIndicator = document.getElementById('loading-indicator');
+    if (loadingIndicator) {
+      loadingIndicator.textContent = loading ? 'Loading...' : '';
+    }
   }
 
   renderHeaders() {
@@ -46,11 +72,12 @@ class DataTable {
   }
 
   get totalPages() {
-    return Math.ceil(this.data.length / this.config.itemsPerPage);
+    return Math.ceil(this.filteredData.length / this.config.itemsPerPage);
   }
 
   getCurrentPageData() {
-    let sortedData = [...this.data];
+    let sortedData = [...this.filteredData];
+
     if (this.sortConfig.column) {
       sortedData.sort((a, b) => {
         const column = this.sortConfig.column as keyof TableRow;
@@ -106,26 +133,28 @@ class DataTable {
     if (!this.container) throw new Error('Container not found');
     const tbody = this.container.querySelector('tbody');
     const pageData = this.getCurrentPageData();
-
-    // Clear existing rows
     tbody!.innerHTML = '';
-
     const fragment = document.createDocumentFragment();
 
-    pageData.forEach(item => {
-      const row = document.createElement('tr');
-      row.dataset.id = item.id.toString(); // Store item id for selection
-
-      this.config.columns.forEach(column => {
-        const cell = document.createElement('td');
-        const value = item[column.key];
-        cell.textContent = value?.toString() ?? '';
-        row.appendChild(cell);
+    if (pageData.length > 0) {
+      pageData.forEach(item => {
+        const row = document.createElement('tr');
+        this.config.columns.forEach(column => {
+          const cell = document.createElement('td');
+          const value = item[column.key];
+          cell.textContent = value?.toString() ?? '';
+          row.appendChild(cell);
+        });
+        fragment.appendChild(row);
       });
-
+    } else {
+      const row = document.createElement('tr');
+      const cell = document.createElement('td');
+      cell.colSpan = this.config.columns.length;
+      cell.textContent = 'No results found';
+      row.appendChild(cell);
       fragment.appendChild(row);
-    });
-
+    }
     tbody!.appendChild(fragment);
   }
 
@@ -182,12 +211,17 @@ class DataTable {
       console.log('Searching for:', searchTerm);
     };
 
-    const debouncedSearch = debounce(handleSearch, 300);
-    const searchInput = document.getElementById('filter') as HTMLInputElement;
-    searchInput.addEventListener('input', (e: Event) => {
-      const target = e.target as HTMLInputElement;
-      debouncedSearch(target.value);
-    });
+    if (this.searchInput) {
+      const debouncedSearch = debounce(
+        (query: string) => this.handleSearch(query),
+        300
+      );
+
+      this.searchInput.addEventListener('input', (e: Event) => {
+        const target = e.target as HTMLInputElement;
+        debouncedSearch(target.value);
+      });
+    }
   }
 }
 
