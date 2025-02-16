@@ -1,68 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      .table-container {
-        margin: 20px;
-      }
-      table {
-        border-collapse: collapse;
-        width: 100%;
-      }
-      th,
-      td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        text-align: left;
-      }
-      th.sortable {
-        cursor: pointer;
-        position: relative;
-        padding-right: 25px; /* Make room for sort indicator */
-      }
-      th.sortable:hover {
-        background-color: #f5f5f5;
-      }
-      .sort-indicator {
-        position: absolute;
-        right: 8px;
-
-        color: #666;
-      }
-      th.sortable:hover {
-        background-color: #f5f5f5;
-      }
-
-      th.sortable:hover .sort-indicator {
-        color: #333;
-      }
-      .selected {
-        background-color: #e6f3ff;
-      }
-
-      #pagination {
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        align-items: center;
-      }
-
-      #pagination button {
-        padding: 5px 10px;
-        cursor: pointer;
-      }
-
-      #pagination button:disabled {
-        cursor: not-allowed;
-        opacity: 0.5;
-      }
-
-      /* Add hover state for rows */
-      tbody tr:hover {
-        background-color: #f9f9f9;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="table-container">
@@ -77,6 +18,6 @@
       </table>
       <div id="pagination"></div>
     </div>
-    <script src="table.js"></script>
+    <script type="module" src="src/table.ts"></script>
   </body>
 </html>

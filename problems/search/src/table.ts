@@ -1,24 +1,37 @@
+import { TableRow, TableConfig } from './types';
+import { testData, tableConfig } from './data';
+
 class DataTable {
-  constructor(containerId, data, config) {
+  private container: HTMLElement | null;
+  private data: TableRow[];
+  private config: TableConfig;
+  private currentPage: number;
+  private sortConfig: {
+    column: string | null;
+    direction: 'asc' | 'desc' | null;
+  };
+
+  constructor(containerId: string, data: TableRow[], config: TableConfig) {
     this.container = document.getElementById(containerId);
     this.data = data;
     this.config = config;
     this.currentPage = 1;
-    this.selectedRows = new Set();
-    this.sortColumn = null;
-    this.sortDirection = 'asc';
 
     this.sortConfig = {
       column: null,
-      direction: null // null, 'asc', or 'desc'
+      direction: null
     };
 
     this.init();
   }
 
   renderHeaders() {
+    if (!this.container || !this.config.columns) throw new Error('Container not found');
     const headerRow = this.container.querySelector('thead tr');
-    headerRow.innerHTML = this.config.columns
+
+
+
+    headerRow!.innerHTML = this.config.columns
       .map(column => `
             <th class="${column.sortable ? 'sortable' : ''}" 
                 data-key="${column.key}">
@@ -39,9 +52,9 @@ class DataTable {
     let sortedData = [...this.data];
     if (this.sortConfig.column) {
       sortedData.sort((a, b) => {
-        const aVal = a[this.sortConfig.column];
-        const bVal = b[this.sortConfig.column];
-
+        const column = this.sortConfig.column as keyof TableRow;
+        const aVal = a[column];
+        const bVal = b[column];
         return this.compareValues(aVal, bVal, this.sortConfig.direction);
       });
     }
@@ -53,6 +66,7 @@ class DataTable {
   }
 
   updateSortIndicators() {
+    if (!this.container) throw new Error('Container not found');
     const headers = this.container.querySelectorAll('th');
     headers.forEach(header => {
       const key = header.dataset.key;
@@ -68,7 +82,7 @@ class DataTable {
   }
 
   // Handle sort
-  handleSort(column) {
+  handleSort(column: string) {
     // If clicking the same column, cycle through: asc -> desc -> no sort
     if (this.sortConfig.column === column) {
       if (this.sortConfig.direction === 'asc') {
@@ -90,34 +104,37 @@ class DataTable {
 
   // Render table body
   renderBody() {
+    if (!this.container) throw new Error('Container not found');
     const tbody = this.container.querySelector('tbody');
     const pageData = this.getCurrentPageData();
 
     // Clear existing rows
-    tbody.innerHTML = '';
+    tbody!.innerHTML = '';
 
     // Create document fragment for better performance
     const fragment = document.createDocumentFragment();
 
     pageData.forEach(item => {
       const row = document.createElement('tr');
-      row.dataset.id = item.id; // Store item id for selection
+      row.dataset.id = item.id.toString(); // Store item id for selection
 
       this.config.columns.forEach(column => {
         const cell = document.createElement('td');
-        cell.textContent = item[column.key];
+        const value = item[column.key];
+        cell.textContent = value?.toString() ?? ''; // Convert to string or empty string if null
         row.appendChild(cell);
       });
 
       fragment.appendChild(row);
     });
 
-    tbody.appendChild(fragment);
+    tbody!.appendChild(fragment);
   }
 
   // Render pagination controls
   renderPagination() {
     const paginationContainer = document.getElementById('pagination');
+    if (!paginationContainer) throw new Error('Pagination container not found');
     paginationContainer.innerHTML = `
             <button id="prev-page" ${this.currentPage === 1 ? 'disabled' : ''}>
                 Previous
@@ -137,23 +154,30 @@ class DataTable {
 
   setupEventListeners() {
     // Pagination event listeners
-    document.getElementById('pagination').addEventListener('click', (e) => {
-      if (e.target.id === 'prev-page' && this.currentPage > 1) {
+    const paginationContainer = document.getElementById('pagination');
+    if (!paginationContainer) throw new Error('Pagination container not found');
+    paginationContainer.addEventListener('click', (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.id === 'prev-page' && this.currentPage > 1) {
         this.currentPage--;
         this.updateTable();
       }
-      else if (e.target.id === 'next-page' && this.currentPage < this.totalPages) {
+      else if (target.id === 'next-page' && this.currentPage < this.totalPages) {
         this.currentPage++;
         this.updateTable();
       }
     });
 
-    this.container.querySelector('thead').addEventListener('click', (e) => {
-      console.log("clicked");
-      const header = e.target.closest('th');
+    if (!this.container) throw new Error('Container not found');
+    const thead = this.container.querySelector('thead');
+    if (!thead) throw new Error('Table head not found');
+
+    thead.addEventListener('click', (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const header = target.closest('th');
       if (header && header.classList.contains('sortable')) {
         const column = header.dataset.key;
-        this.handleSort(column);
+        this.handleSort(column!);
       }
     });
   }
@@ -164,56 +188,36 @@ class DataTable {
     this.setupEventListeners();
   }
 
-  compareValues(a, b, direction) {
+  compareValues(aVal: any, bVal: any, direction: 'asc' | 'desc' | null) {
     // Handle null/undefined values
-    if (a == null) return direction === 'asc' ? -1 : 1;
-    if (b == null) return direction === 'asc' ? 1 : -1;
+    if (aVal == null) return direction === 'asc' ? -1 : 1;
+    if (bVal == null) return direction === 'asc' ? 1 : -1;
 
     // Detect value type and compare accordingly
-    if (typeof a === 'string' && typeof b === 'string') {
+    if (typeof aVal === 'string' && typeof bVal === 'string') {
       return direction === 'asc'
-        ? a.localeCompare(b)
-        : b.localeCompare(a);
+        ? aVal.localeCompare(bVal)
+        : bVal.localeCompare(aVal);
     }
 
     // Handle numbers
-    if (typeof a === 'number' && typeof b === 'number') {
-      return direction === 'asc' ? a - b : b - a;
+    if (typeof aVal === 'number' && typeof bVal === 'number') {
+      return direction === 'asc' ? aVal - bVal : bVal - aVal;
     }
 
     // Handle dates
-    if (a instanceof Date && b instanceof Date) {
+    if (aVal instanceof Date && bVal instanceof Date) {
       return direction === 'asc'
-        ? a.getTime() - b.getTime()
-        : b.getTime() - a.getTime();
+        ? aVal.getTime() - bVal.getTime()
+        : bVal.getTime() - aVal.getTime();
     }
 
     // Default comparison
     return direction === 'asc'
-      ? String(a).localeCompare(String(b))
-      : String(b).localeCompare(String(a));
+      ? String(aVal).localeCompare(String(bVal))
+      : String(bVal).localeCompare(String(aVal));
   }
 
 }
 
-// Test data with edge cases
-const testData = [
-  { id: 1, name: 'Product A', price: 100, date: new Date('2024-01-01') },
-  { id: 2, name: 'Product C', price: 50, date: new Date('2024-03-15') },
-  { id: 3, name: 'Product B', price: null, date: new Date('2024-02-01') },
-  { id: 4, name: 'Product D', price: 75, date: null },
-  { id: 5, name: null, price: 200, date: new Date('2024-01-15') },
-  { id: 6, name: 'Product É', price: 150, date: new Date('2024-02-15') }, // Unicode character
-  { id: 7, name: 'product a', price: 90, date: new Date('2024-03-01') }   // Case difference
-];
-
-const config = {
-  columns: [
-    { key: 'name', label: 'Product Name', sortable: true },
-    { key: 'price', label: 'Price', sortable: true },
-    { key: 'date', label: 'Date', sortable: true }
-  ],
-  itemsPerPage: 10
-};
-
-const table = new DataTable('data-table', testData, config);
+const table = new DataTable('data-table', testData, tableConfig);
