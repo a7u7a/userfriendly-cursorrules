@@ -119,7 +119,6 @@ class DataTable {
       this.config.columns.forEach(column => {
         const cell = document.createElement('td');
         const value = item[column.key];
-        console.log("value", value);
         cell.textContent = value?.toString() ?? '';
         row.appendChild(cell);
       });

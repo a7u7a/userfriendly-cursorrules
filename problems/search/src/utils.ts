@@ -1,4 +1,6 @@
-export const compareValues = (aVal: any, bVal: any, direction: 'asc' | 'desc' | null) => {
+import { TableRow } from "./types";
+
+export const compareValues = (aVal: TableRow[keyof TableRow], bVal: TableRow[keyof TableRow], direction: 'asc' | 'desc' | null) => {
   // Handle null/undefined values
   if (aVal == null) return direction === 'asc' ? -1 : 1;
   if (bVal == null) return direction === 'asc' ? 1 : -1;
