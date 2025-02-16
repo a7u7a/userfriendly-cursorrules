@@ -15,7 +15,7 @@ const tableConfig: TableConfig = {
   columns: [
     { key: 'name', label: 'Product Name', sortable: true },
     { key: 'price', label: 'Price', sortable: true },
-    { key: 'date', label: 'Date', sortable: true }
+    { key: 'date', label: 'Date', sortable: false }
   ],
   itemsPerPage: 10
 };

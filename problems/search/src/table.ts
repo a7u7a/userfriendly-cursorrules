@@ -102,7 +102,7 @@ class DataTable {
 
     // Clear existing rows
     tbody!.innerHTML = '';
-    
+
     const fragment = document.createDocumentFragment();
 
     pageData.forEach(item => {
@@ -162,11 +162,13 @@ class DataTable {
     if (!thead) throw new Error('Table head not found');
 
     thead.addEventListener('click', (e: MouseEvent) => {
-      const header = e.target as HTMLElement;
-      if (header && header.classList.contains('sortable')) {
-        const column = header.dataset.key;
+
+      const headerCell = (e.target as HTMLElement).closest('th');
+      if (headerCell?.classList.contains('sortable')) {
+        const column = headerCell.dataset.key;
         this.handleSort(column!);
       }
+      e.stopImmediatePropagation();
     });
   }
 
