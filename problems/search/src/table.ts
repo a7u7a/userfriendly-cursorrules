@@ -28,9 +28,6 @@ class DataTable {
   renderHeaders() {
     if (!this.container || !this.config.columns) throw new Error('Container not found');
     const headerRow = this.container.querySelector('thead tr');
-
-
-
     headerRow!.innerHTML = this.config.columns
       .map(column => `
             <th class="${column.sortable ? 'sortable' : ''}" 
@@ -41,14 +38,11 @@ class DataTable {
         `).join('');
   }
 
-  // Calculate total pages
   get totalPages() {
     return Math.ceil(this.data.length / this.config.itemsPerPage);
   }
 
-  // Get current page data
   getCurrentPageData() {
-    // First sort
     let sortedData = [...this.data];
     if (this.sortConfig.column) {
       sortedData.sort((a, b) => {
@@ -59,7 +53,7 @@ class DataTable {
       });
     }
 
-    // Then paginate
+    // Paginate
     const startIndex = (this.currentPage - 1) * this.config.itemsPerPage;
     const endIndex = startIndex + this.config.itemsPerPage;
     return sortedData.slice(startIndex, endIndex);
@@ -75,13 +69,12 @@ class DataTable {
         if (key === this.sortConfig.column) {
           indicator.textContent = this.sortConfig.direction === 'asc' ? '+' : '-';
         } else {
-          indicator.textContent = 'Sort';  // empty space
+          indicator.textContent = 'Sort';
         }
       }
     });
   }
 
-  // Handle sort
   handleSort(column: string) {
     // If clicking the same column, cycle through: asc -> desc -> no sort
     if (this.sortConfig.column === column) {
@@ -102,7 +95,6 @@ class DataTable {
     this.updateTable();
   }
 
-  // Render table body
   renderBody() {
     if (!this.container) throw new Error('Container not found');
     const tbody = this.container.querySelector('tbody');
@@ -110,8 +102,7 @@ class DataTable {
 
     // Clear existing rows
     tbody!.innerHTML = '';
-
-    // Create document fragment for better performance
+    
     const fragment = document.createDocumentFragment();
 
     pageData.forEach(item => {
@@ -121,7 +112,7 @@ class DataTable {
       this.config.columns.forEach(column => {
         const cell = document.createElement('td');
         const value = item[column.key];
-        cell.textContent = value?.toString() ?? ''; // Convert to string or empty string if null
+        cell.textContent = value?.toString() ?? '';
         row.appendChild(cell);
       });
 
@@ -131,8 +122,7 @@ class DataTable {
     tbody!.appendChild(fragment);
   }
 
-  // Render pagination controls
-  renderPagination() {
+  renderPaginationControls() {
     const paginationContainer = document.getElementById('pagination');
     if (!paginationContainer) throw new Error('Pagination container not found');
     paginationContainer.innerHTML = `
@@ -148,12 +138,11 @@ class DataTable {
 
   updateTable() {
     this.renderBody();
-    this.renderPagination();
+    this.renderPaginationControls();
     this.updateSortIndicators();
   }
 
   setupEventListeners() {
-    // Pagination event listeners
     const paginationContainer = document.getElementById('pagination');
     if (!paginationContainer) throw new Error('Pagination container not found');
     paginationContainer.addEventListener('click', (e: MouseEvent) => {
@@ -173,8 +162,7 @@ class DataTable {
     if (!thead) throw new Error('Table head not found');
 
     thead.addEventListener('click', (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const header = target.closest('th');
+      const header = e.target as HTMLElement;
       if (header && header.classList.contains('sortable')) {
         const column = header.dataset.key;
         this.handleSort(column!);
@@ -217,7 +205,6 @@ class DataTable {
       ? String(aVal).localeCompare(String(bVal))
       : String(bVal).localeCompare(String(aVal));
   }
-
 }
 
-const table = new DataTable('data-table', testData, tableConfig);
+const _ = new DataTable('data-table', testData, tableConfig);
