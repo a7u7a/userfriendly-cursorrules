@@ -1,6 +1,6 @@
 import { TableRow, TableConfig } from './types';
 import { testData, tableConfig } from './data';
-import { compareValues } from './utils';
+import { compareValues, debounce } from './utils';
 
 class DataTable {
   private container: HTMLElement | null;
@@ -176,6 +176,17 @@ class DataTable {
         this.handleSort(column!);
       }
       e.stopImmediatePropagation();
+    });
+
+    const handleSearch = (searchTerm: string) => {
+      console.log('Searching for:', searchTerm);
+    };
+
+    const debouncedSearch = debounce(handleSearch, 300);
+    const searchInput = document.getElementById('filter') as HTMLInputElement;
+    searchInput.addEventListener('input', (e: Event) => {
+      const target = e.target as HTMLInputElement;
+      debouncedSearch(target.value);
     });
   }
 }

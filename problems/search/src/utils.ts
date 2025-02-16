@@ -30,3 +30,20 @@ export const compareValues = (aVal: TableRow[keyof TableRow], bVal: TableRow[key
     : String(bVal).localeCompare(String(aVal));
 }
 
+
+export function debounce<T extends (...args: any[]) => void>(
+  func: T,
+  delay: number
+): (...args: Parameters<T>) => void {
+  let timeoutId: ReturnType<typeof setTimeout>;
+
+  return function(this: ThisParameterType<T>, ...args: Parameters<T>) {
+    // Clear the existing timeout
+    clearTimeout(timeoutId);
+
+    // Set a new timeout
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+}
