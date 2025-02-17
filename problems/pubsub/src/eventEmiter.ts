@@ -31,9 +31,63 @@ class EventEmitter implements IEventEmitter {
     const handlers = this.events.get(event)!;
     handlers.add(handler);
   }
-  off() { }
-  emit() { }
-  clear() { }
+
+  emit<T>(event: string, data: T): void {
+    // Input validation
+    if (!event || typeof event !== 'string') {
+      throw new Error('Event name must be a valid string');
+    }
+
+    // Get handlers for this event
+    const handlers = this.events.get(event);
+
+    // If no handlers, return silently (common pattern in event systems)
+    if (!handlers) {
+      return;
+    }
+
+    // Execute all handlers, catching errors to prevent one handler from breaking others
+    handlers.forEach((handler) => {
+      try {
+        handler(data);
+      } catch (error) {
+        // In a real production system, you might want to:
+        // 1. Log this error
+        // 2. Emit an error event
+        // 3. Pass to error boundary
+        console.error(`Error in event handler for ${event}:`, error);
+      }
+    });
+  }
+
+  off<T>(event: string, handler: EventHandler<T>): void {
+    // Input validation
+    if (!event || typeof event !== 'string') {
+      throw new Error('Event name must be a valid string');
+    }
+
+    if (typeof handler !== 'function') {
+      throw new Error('Handler must be a function');
+    }
+
+    // Get handlers set
+    const handlers = this.events.get(event);
+
+    if (handlers) {
+      // Remove the specific handler
+      handlers.delete(handler);
+
+      // Clean up empty sets
+      if (handlers.size === 0) {
+        this.events.delete(event);
+      }
+    }
+  }
+
+  clear(): void {
+    // Remove all event handlers
+    this.events.clear();
+  }
 }
 
 export default EventEmitter;
